@@ -1,1 +1,1 @@
-C 'Hello, world'
+C "Hello, world"
