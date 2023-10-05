@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main - "C program that prints  a sentence and ends on a new line"
- * Return : 0 (Good)
+ * main - Entry point
+ * Return: Always 0 (Good)
  */
 int main(void)
 {
-puts ("\"Programming is like building a multilingual puzzle");
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
