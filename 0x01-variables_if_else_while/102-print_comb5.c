@@ -1,43 +1,45 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- *main - print a num pair from 00-99 but no repeats (00 01, 00 02, 00 03,...)
- *Return: Always 0 (Success)
+ * main - A program that prints combination of all two digit numbers 0-99.
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int fTens;
+	int fOnes;
+	int sTens;
+	int sOnes;
+	int num, num2;
 
-	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
-{
-	for (ones = '0'; ones <= '9'; ones++)
-{
-	for (t = tens; t <= '9'; t++) /*print second of pair*/
-{
-	for (o = ones + 1; o <= '9'; o++)
-{
-	putchar(tens);
-	putchar(ones);
-	putchar(' ');
-	putchar(t);
-	putchar(o);
+	for (num = 0; num <= 99; num++)
+	{
+		fTens = num / 10;
+		fOnes = num % 10;
 
-	if (!((tens == '9' && ones == '8') &&
-	(t == '9' && o == '9')))
-{
-	putchar(',');
-	putchar(' ');
+		for (num2 = 0; num2 <= 99; num2++)
+		{
+			sTens = num2 / 10;
+			sOnes = num2 % 10;
+
+			if (fTens < sTens || (fTens == sTens && fOnes < sOnes))
+			{
+				putchar(fTens + '0');
+				putchar(fOnes + '0');
+				putchar(' ');
+				putchar(sTens + '0');
+				putchar(sOnes + '0');
+
+					if (!(fTens == 9 && fOnes == 8))
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
-				o = '0';
-			}
 		}
 	}
-	putchar('\n');
+		putchar('\n');
 
 	return (0);
 }
