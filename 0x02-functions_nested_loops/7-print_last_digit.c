@@ -1,17 +1,21 @@
 #include "main.h"
 
 /**
- * print_last_digit - print last digit of integer
- * @n: integer argument
- * Return: last digit of number
+ * print_last_digit - Write a function that prints the last digit of a number.
+ * @n: argument to be check
+ *
+ * Return: absolute value of n
  */
-
 int print_last_digit(int n)
 {
-	if (n < 0)
-		n *= -1;
+	int absVal;
 
-       	_putchar('0' + (n % 10));
+	absVal = n % 10;
 
-	return (n % 10);
+	if (absVal < 0)
+	{
+		absVal = absVal * -1;
+	}
+	_putchar(absVal + '0');
+	return (absVal);
 }
