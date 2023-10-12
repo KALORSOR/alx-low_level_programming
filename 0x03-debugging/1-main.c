@@ -11,13 +11,36 @@ int main(void)
 
         printf("Infinite loop incoming :(\n");
 
-        i = 0; /*i is initialized to 0 just before the while loop and not incremented in the while loop*/
+        i = 0;
 
-        while (i < 10) /*while condition is given, an if the value of i is less than 10, the loop iterates*/
+        while (i < 10)
         {
-                putchar(i); /*i is not incremented (i++); thus i remains 0 causing an infinite loop in the code*/
+                putchar(i);
         }
 
+        printf("Infinite loop avoided! \\o/\n");
+
+        return (0);
+}#include <stdio.h>
+
+/**
+* main - causes an infinite loop
+* Return: 0
+*/
+
+int main(void)
+{
+        int i;
+
+        printf("Infinite loop incoming :(\n");
+
+        i = 0;
+	/*
+        **while (i < 10)
+        *{
+         *       putchar(i);
+        *}
+	*/
         printf("Infinite loop avoided! \\o/\n");
 
         return (0);
