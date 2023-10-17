@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * changes pointer value of *n to 98
+ * reset_to_98.c - changes pointer value of *n to 98
  * @n: pointer of int type
- * return: null
+ * Return: null
  */
 
-void reset_to_98(int *n)
+void reset_to_98(int *n)/*prototype function*/
 {
 	*n = 98;
 }
