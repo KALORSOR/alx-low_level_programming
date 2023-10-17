@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98.c - changes pointer value of *n to 98
- * @n: pointer of int type
+ * @n: pointer to int n
  * Return: null
  */
 
