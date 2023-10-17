@@ -5,7 +5,8 @@
  * @n: pointer of int type
  * Return: null
  */
-void reset_to_98(int *n)
+
+/*Prototype*/void reset_to_98(int *n)
 {
 	*n = 98;
 }
