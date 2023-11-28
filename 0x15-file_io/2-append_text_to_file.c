@@ -1,4 +1,21 @@
 #include "main.h"
+#include <stddef.h>
+
+/**
+ * _strlen - counts string length
+ * @str: string to be used
+ *
+ * Return: length of the string
+ */
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while (str[len] != '\0')
+		len++;
+	return (len);
+}
+
 
 /**
  * append_text_to_file - appends text at the end of a file
